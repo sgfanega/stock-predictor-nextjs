@@ -10,3 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
+.canvas {
+    min-height: 50vh;
+}

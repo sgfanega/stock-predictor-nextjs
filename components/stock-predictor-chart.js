@@ -2,6 +2,7 @@ import { LineChart } from "./line-chart";
 
 export default function StockPredictorChart(props) {
   const options = {
+    responsive: true,
     maintainAspectRatio: false,
     plugins: {
       legend: {
@@ -25,6 +26,6 @@ export default function StockPredictorChart(props) {
   }
 
   return (
-    <LineChart options={options} data={data}/>
+      <LineChart options={options} data={data} height={100} width={50}/>   
   )
 }

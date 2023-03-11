@@ -1,5 +1,4 @@
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
+import { NextSeo } from 'next-seo';
 import StockPredictor from '../components/stock-predictor'
 import Footer from '../components/footer'
 
@@ -11,12 +10,31 @@ export default function Home() {
   }
   return (
     <>
-      <Head>
-        <title>Stock Predictor</title>
-        <meta name="description" content="Stock Predictions" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <NextSeo 
+        title="Stock Predictor"
+        description="A Simple Stock Predictor using Machine Learning SVM in Python"
+        openGraph={{
+          url: 'https://stock-predictor-fwd.netlify.app/',
+          title: 'Stock Predictor',
+          description: "A Simple Stock Predictor using Machine Learning SVM in Python",
+          images: [
+            {
+              url: '/stock-prediction-og.webp',
+              width: 1200,
+              height: 630,
+              alt: 'Stock Predictor',
+              type: 'image/wepb'
+            }
+          ],
+          siteName: 'Stock Predictor'
+        }}
+        additionalLinkTags={[
+          {
+            rel: 'icon',
+            href: '/favicon.ico'
+          }
+        ]}
+      />
       <main className="min-vh-100">
         <div className="container stockpredictor">
           <h1 className="display-3 text-center">Stock Predictor</h1>

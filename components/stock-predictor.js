@@ -14,13 +14,16 @@ export default function StockPredictor() {
           setData(data.data)
           setTickerSymbolArrayFromData(data.data)
         })
+        .catch(error => {
+          console.log(error)
+        })
     }
     
     async function setTickerSymbolArrayFromData(data) {
       setTickerSymbolArray(data.map((stock) => { return stock.attributes.ticker_symbol }))
     }
 
-    fetchStockDataFromAPI(`https://146.190.112.250/api/stockpredictions`)
+    fetchStockDataFromAPI(`api/stockpredictions`)
   }, [])
   
   function getStockData(data, tickerSymbol) {

@@ -29,7 +29,7 @@ export default function StockPredictor() {
     return stockData?.attributes
   }
   
-  if (!data) { return <p> Loading ...</p>}
+  if (!data) { return <p className="text-center"> Loading ...</p>}
 
   return (
     <> 

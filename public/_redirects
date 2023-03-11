@@ -1,0 +1,2 @@
+# Testing Redirects
+http://146.190.112.250/api/stockpredictions https://146.190.112.250/api/stockpredictions:splat 200!

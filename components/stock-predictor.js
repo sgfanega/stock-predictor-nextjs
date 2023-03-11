@@ -20,7 +20,7 @@ export default function StockPredictor() {
       setTickerSymbolArray(data.map((stock) => { return stock.attributes.ticker_symbol }))
     }
 
-    fetchStockDataFromAPI('http://146.190.112.250/api/stockpredictions')
+    fetchStockDataFromAPI(`http://146.190.112.250/api/stockpredictions`)
   }, [])
   
   function getStockData(data, tickerSymbol) {
